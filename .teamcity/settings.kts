@@ -36,7 +36,7 @@ object TestBuildTask : BuildType({
     steps {
         script {
             name = "Show hello message"
-            scriptContent = """echo "Hello world 1111111""""
+            scriptContent = """echo "Hello world 111111122222222""""
         }
     }
 })
