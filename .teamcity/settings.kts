@@ -28,14 +28,22 @@ version = "2019.2"
 project {
 
     buildType(TestBuildTask)
+
+    template(TestTemplate)
 }
 
 object TestBuildTask : BuildType({
+    templates(TestTemplate)
     name = "TestBuildTask"
+})
+
+object TestTemplate : Template({
+    name = "testTemplate"
 
     steps {
         script {
             name = "Show hello message"
+            id = "RUNNER_1"
             scriptContent = """echo "Hello world 111111122222222""""
         }
     }
