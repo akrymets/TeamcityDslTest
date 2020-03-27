@@ -27,13 +27,14 @@ version = "2019.2"
 
 project {
 
-    buildType(TestBuildTask)
+    buildType(TestProject_TestBuildTask)
 
-    template(TestTemplate)
+    template(TestProject_TestTemplate)
 }
 
-object TestBuildTask : BuildType({
-    templates(TestTemplate)
+object TestProject_TestBuildTask : BuildType({
+    templates(TestProject_TestTemplate)
+    id("TestBuildTask")
     name = "TestBuildTask"
 
     steps {
@@ -45,7 +46,8 @@ object TestBuildTask : BuildType({
     }
 })
 
-object TestTemplate : Template({
+object TestProject_TestTemplate : Template({
+    id("TestTemplate")
     name = "testTemplate"
 
     steps {
