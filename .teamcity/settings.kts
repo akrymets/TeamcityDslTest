@@ -35,6 +35,14 @@ project {
 object TestBuildTask : BuildType({
     templates(TestTemplate)
     name = "TestBuildTask"
+
+    steps {
+        script {
+            name = "Second echo"
+            id = "RUNNER_2"
+            scriptContent = """echo "Oppa Gungnam style""""
+        }
+    }
 })
 
 object TestTemplate : Template({
